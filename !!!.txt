@@ -1,0 +1,8 @@
+1 . KEYWORDS: thin, thick, larger...
+2. user agent css styles (IE, Chrome. Will be shown in dev tools)
+3. CSS RESET STYLESHEET
+4. SPECIFICITY -> ВАЖНОСТЬ (priority)
+5. Inheritance
+---------------------
+
+

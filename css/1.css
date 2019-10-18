@@ -1,7 +1,57 @@
+/*selector*/
 body {
-    background-color: antiquewhite;
+    /*property-name: value*/
+    background-color: antiquewhite !important;
+    background-image: url("https//..");
+    background-image: url("bgImg.jpeg");
+}
+
+* {
+    color: white;
 }
 
 p {
     font-size: larger;
+    font-size: x-large;
+    border-style: solid;
+    border-color: black;
+    border-width: thick;
+    border-width: 12px;
+    border-width: 2mm;
+    width: 50%;
+}
+
+h1, h2 {
+    font-size: 12px;
+}
+
+/*descendant selector*/
+/*<div>*/
+/*  <form>*/
+/*    <p>
+/* ... */
+div p {
+    background-color: aqua;
+
+}
+
+/*child selector*/
+/*<div>*/
+/*    <p>   -> CHILD
+/* ... */
+div > p {
+    background-color: aqua;
+}
+
+
+/* attribute selector*/
+
+img[alt=space] {
+    padding: 0px;
+}
+
+/* psuedo class*/
+
+a:visited {
+    color: red;
 }
