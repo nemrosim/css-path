@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 1rem;
+  background-color: #d0cdc4;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+// variant 1
+
+button {
+  width: 80%;
+  height: 3rem;
+  border: none;
+  border-radius: 20px;
+  transition-duration: 300ms;
+  text-transform: uppercase;
+  background-color: #ffe9cf;
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    width: 90%;
+    background-color: #ffe89d;
+  }
+
+  @media (min-width: 700px) {
+    width: 30%;
+    margin: 0 auto;
+    &:hover {
+      width: 40%;
+      background-color: #ffe89d;
+    }
+  }
+}
+
+// variant 2
+
+$border: 20px;
+$media-tablet: 700px;
+
+// variant 1
+@mixin respond-to($media: tablet) {
+  @if $media == tablet {
+    @media (min-width: $media-tablet) {
+      @content
+    }
+  } @else {
+    @media (min-width: 700px) {
+      @content
+    }
+  }
+}
+
+// variant 2
+@mixin respond-to($val: min-width,$query: 700px) {
+    @media ($val: $query) {
+      @content
+    }
+}
+
+%btn {
+  width: 80%;
+  height: 3rem;
+  border: none;
+  border-radius: $border;
+  transition-duration: 300ms;
+  text-transform: uppercase;
+  background-color: #ffe9cf;
+  box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    width: 90%;
+    background-color: #ffe89d;
+  }
+}
+
+.btn {
+  @extend %btn;
+  @include respond-to(min-width,700px){
+    width: 30%;
+    margin: 0 auto;
+    &:hover {
+      width: 40%;
+      background-color: #ffe89d;
+    }
+  }
+
+}

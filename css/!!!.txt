@@ -1,2 +1,9 @@
 1. box-sizing
 2. border-left-color
+3. transition-duration
+4. @media (min-width: 700px)
+
+           TO left   bottom  size
+5. box-shadow (40px    8px    15px rgba(0, 0, 0, 0.1)
+6. outline: none
+7. cursor: pointer;
