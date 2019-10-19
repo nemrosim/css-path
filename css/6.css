@@ -1,0 +1,17 @@
+div {
+    position: static;
+    /* relative to parent */
+    /* if just add this property - nothing will change*/
+    /*but after that (top, bottom,left...) can be added */
+    position: relative;
+
+    /* relative to body */
+    position: absolute;
+
+    /* fixed in window */
+    position: fixed;
+}
+
+#button input:last-child{
+    position: relative;
+}

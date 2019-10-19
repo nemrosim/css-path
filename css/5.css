@@ -1,0 +1,22 @@
+div {
+    font-family: sans-serif;
+    font-family: monospace;
+    font-family: cursive;
+    /* 1st choice, 2nd choice, last resort */
+    font-family: Arial, Helvet, sans-serif;
+    font-size: 1.2em;
+
+
+
+
+    font-style: italic;
+    font-size: 1.2em;
+    font-family: sans-serif;
+/*    SHORT */
+    font: italic 1.2em sans-serif;
+
+    text-align: justify;
+}
+
+
+/* <pre> - preformatted text*/

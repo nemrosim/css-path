@@ -1,0 +1,22 @@
+div {
+    /*remove from dom*/
+    display: none;
+    /*dont remove from dom*/
+    visibility: hidden;
+}
+
+div {
+    /* cant set width*/
+    display: inline;
+    /*CAN*/
+    display: inline-block;
+}
+
+a {
+    /*remove underscore in link*/
+    text-decoration: none;
+}
+
+.menu li:hover {
+    color: red;
+}

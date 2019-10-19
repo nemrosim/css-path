@@ -4,5 +4,17 @@
 4. SPECIFICITY -> ВАЖНОСТЬ (priority)
 5. Inheritance
 ---------------------
+         BOX MODEL
+
+1. margin, padding, border
+2. PADDING - push content out of the border
+3. VERTICAL MARGINs COLLAPSES (MERGING: one "bottom 6px", two "top 6px". Will be NOT 12px BUT 6px)
+4. EVERY ELEMENT HAS 'display' property (block (div, p), inline (span), none)
+5. TEXT PROPERTIES (text-indent, letter-spacing, etc)
+
+--------------------
+Layout
+position: static -> default
+absolute - относительно body, если не находиться внутри другого absolute
 
 
