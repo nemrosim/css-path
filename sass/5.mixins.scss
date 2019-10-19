@@ -1,0 +1,50 @@
+// NOT COOL BUT STILL CAN
+@mixin button {
+  background-color: red;
+  color: white;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+
+// IF NOTHING WILL BE PASSED (x) - 'border box will be used'
+@mixin setBoxSizing($x: border-box) {
+  // https://www.w3schools.com/css/css3_box-sizing.asp
+  // The CSS box-sizing property allows us to include the padding and border in an element's total width and height.
+  -webkit-box-sizing: $x;
+  -moz-box-sizing: $x;
+  box-sizing: $x;
+}
+
+// TWO ARGUMENTS
+@mixin setTwoValues($color: #ffffff, $radius: 3px) {
+  color: $color;
+  border-radius: $radius;
+}
+
+@mixin transition($var...){
+  -webkit-transition: $var;
+  -o-transition: $var;
+  transition: $var;
+}
+
+@mixin highlight($side, $color){
+  border-#{$side}-color: $color;
+}
+
+.a-btn {
+  @include button;
+  @include setBoxSizing;
+  @include setTwoValues($color: #7eb0ff, $radius: 5px);
+  @include highlight(left, red);
+  @include transition(width, .35s, ease-in-out);
+  width: 200px;
+}
+
+.b-btn {
+  @include button;
+  @include setTwoValues(#7eb0ff, 5px);
+  @include setBoxSizing(content-box);
+
+  width: 600px;
+}

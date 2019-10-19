@@ -1,0 +1,33 @@
+// BAD
+.a-btn {
+  color: red;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+.b-btn {
+  @extend .a-btn;
+  color: green;
+}
+
+
+// ---- GOOD ----
+// 4095
+%btn {
+  color: red;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+.a-btn {
+  @extend %btn;
+}
+
+.b-btn{
+  @extend %btn;
+  color: green;
+}
+
+.sidebar .a-btn {
+  text-transform: lowercase;
+}

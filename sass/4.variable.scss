@@ -1,0 +1,22 @@
+$base: #ffffff;
+$base: #ff9e72;
+
+$default: #ffffff;
+$default: #89a5ff !default;
+
+$side: top;
+
+.container {
+  // 'Base' - will be overwritten by the last value - #ff9...
+  background-color: $base;
+
+  // 'Default' - will NOT be overwritten by the last value - #89a...
+  color: $default;
+
+  // SIDE VARIABLE
+  #{$side}: 0.5rem;
+}
+
+.some-class-#{$side} {
+  font-family: sans-serif;
+}

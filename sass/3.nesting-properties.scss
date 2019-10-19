@@ -1,0 +1,41 @@
+// This will be transformed to 'text-decoration' and 'text-transform'
+.btn {
+  text: {
+    decoration: none;
+    transform: capitalize;
+  }
+}
+
+.content {
+  height: 2rem;
+  background-color: red;
+
+  .child {
+    height: 2rem;
+    background-color: green;
+  }
+
+  &.child {
+    height: 20rem;
+    background-color: yellow;
+  }
+}
+
+a {
+  color: green;
+
+  &:hover {
+    color: blue;
+  }
+
+  &:active {
+    color: green;
+  }
+}
+
+.sidebar {
+  width: 100%;
+  .user & {
+    height: 200px;
+  }
+}

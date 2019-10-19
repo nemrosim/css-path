@@ -1,0 +1,2 @@
+1. box-sizing
+2. border-left-color

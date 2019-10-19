@@ -1,0 +1,35 @@
+// --------- FUNCTION ------------------
+
+@function fluidize($target, $context) {
+  @return ($target/$context) * 100%;
+}
+
+.sidebar {
+  width: fluidize(350px, 1000px);
+}
+
+// ----------- IF ELSE ---------------
+$theme: dark;
+
+header {
+  @if $theme == dark {
+    background: #000;
+  } @else if ($theme == pink) {
+    background: pink;
+  } @else {
+    background: white;
+  }
+}
+
+// ----------- LOOP -----------------
+
+$authors: nick bob john mary;
+
+@each $author in $authors {
+  .author-#{$author} {
+    background: url(author-#{$author}.jpg);
+  }
+}
+
+// @for
+// @while
